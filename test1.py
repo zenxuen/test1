@@ -6,8 +6,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
+uploaded = st.file_uploader("C:\\Users\\user\\Downloads\\Assignment\\Assignment\\salary_data.csv", type=["csv"])
 # --- 1. Load CSV ---
-df = pd.read_csv("C:\\Users\\user\\Downloads\\Assignment\\Assignment\\salary_data.csv")
+df = pd.read_csv(uploaded)
 
 # --- 2. Features & Target ---
 X = df[['work_year', 'experience_level', 'employment_type', 'job_title',
@@ -79,6 +80,7 @@ plt.xlabel('Year')
 plt.ylabel('Predicted Salary (USD)')
 plt.legend()
 st.pyplot(plt)
+
 
 
 
