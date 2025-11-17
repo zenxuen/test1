@@ -7,7 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
 # --- 1. Load CSV ---
-df = pd.read_csv("salary_data.csv")
+df = pd.read_csv("C:\Users\user\Downloads\Assignment\Assignment\salary_data.csv")
 
 # --- 2. Features & Target ---
 X = df[['work_year', 'experience_level', 'employment_type', 'job_title',
@@ -79,5 +79,6 @@ plt.xlabel('Year')
 plt.ylabel('Predicted Salary (USD)')
 plt.legend()
 st.pyplot(plt)
+
 
 
